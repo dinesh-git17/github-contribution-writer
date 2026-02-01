@@ -266,8 +266,7 @@ Examples:
 
     # Generate
     if not args.dry_run:
-        script_dir = os.path.dirname(os.path.abspath(__file__))
-        generate_commits(dates, script_dir, dry_run=args.dry_run)
+        generate_commits(dates, os.getcwd(), dry_run=args.dry_run)
     else:
         print("\n Remove --dry-run to generate commits")
 
